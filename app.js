@@ -14,7 +14,9 @@ app.use(express.json());
 
 //connect with router
 const userRouter = require('./routes/auth');
+const postRouter = require('./routes/post')
 app.use('/users', userRouter);
+app.use('/posts',postRouter)
 
 
 app.listen(8000, () => {
